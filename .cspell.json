@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "AddProductPage",
+    "AdminDashboard",
+    "AdminProductsPage",
+    "cremecollections",
+    "ecommerce",
+    "jsonwebtoken",
+    "Mwenga",
+    "nodemailer",
+    "shopmanager",
+    "slugify",
+    "subcategories",
+    "superadmin",
+    "Toastify",
+    "Uncategorized",
+    "userInfo"
+  ],
+  "ignorePaths": [
+    ".gitignore",
+    "node_modules",
+    ".next",
+    ".vercel",
+    "build",
+    "dist",
+    "public"
+  ]
+}

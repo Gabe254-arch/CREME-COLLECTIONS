@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------- */
+/* ✅ 1. Global Reset & Base Styling   */
+/* ----------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+  --primary-color: #ff6600;
+  --secondary-color: #1a1a1a;
+  --light-bg: #f9f9f9;
+  --dark-bg: #181818;
+}
+
+/* ----------------------------------- */
+/* ✅ 2. Typography Enhancements       */
+/* ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  text-decoration: underline;
+  color: #e65c00;
+}
+
+/* ----------------------------------- */
+/* ✅ 3. Buttons & Interactions        */
+/* ----------------------------------- */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  @apply px-3 py-2 rounded shadow-sm hover:shadow-md transition;
+}
+
+.btn-danger {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.btn-danger:hover {
+  background-color: #e43d3d;
+}
+
+/* ----------------------------------- */
+/* ✅ 4. Dashboard Grid + Cards        */
+/* ----------------------------------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.kpi-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.kpi-box h4 {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.kpi-box p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ----------------------------------- */
+/* ✅ 5. Recharts Tooltip Styling      */
+/* ----------------------------------- */
+.recharts-tooltip-wrapper {
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.recharts-tooltip-item-list {
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.recharts-tooltip-item-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.recharts-tooltip-item-value {
+  color: #666;
+}
+
+/* ----------------------------------- */
+/* ✅ 6. Animations                    */
+/* ----------------------------------- */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+.loader-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  animation: bounce 1.2s infinite ease-in-out;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+/* ----------------------------------- */
+/* ✅ 7. Utility & Layout Classes      */
+/* ----------------------------------- */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  line-height: 2;
+}
+
+/* ----------------------------------- */
+/* 🌙 8. Dark Mode Support             */
+/* ----------------------------------- */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: #f0f0f0;
+}
+
+.dark-mode .card,
+.dark-mode .kpi-box {
+  background-color: #232323;
+  color: #f5f5f5;
+}
+
+.dark-mode a {
+  color: #ffa94d;
+}

@@ -1,0 +1,32 @@
+﻿name: 🧪 Spellcheck + Lint + Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🧾 Checkout code
+      uses: actions/checkout@v3
+
+    - name: ⚙️ Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: 📦 Install dependencies
+      run: npm install
+
+    - name: 🔁 Run spell-sync
+      run: npm run spell-sync
+
+    - name: 🧼 Run ESLint
+      run: npm run lint
+
+    - name: 🧪 Run tests
+      run: npm test

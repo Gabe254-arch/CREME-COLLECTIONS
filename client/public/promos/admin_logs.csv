@@ -1,0 +1,11 @@
+﻿Admin,Action,Target,Notes,IP,Date
+Main Admin,activate,customer,Account reactivated,::1,"26/05/2025, 11:39:19"
+Admin,reset-password,Main Admin,Password reset by admin,::1,"26/05/2025, 11:17:30"
+Admin,activate,Main Admin,Account reactivated,::1,"26/05/2025, 11:17:14"
+Admin,change-role,Buga,Changed role to shopmanager,::1,"25/05/2025, 22:55:14"
+Admin,suspend,customer,Account suspended,::1,"25/05/2025, 20:28:54"
+Admin,suspend,Main Admin,Account suspended,::1,"25/05/2025, 20:28:37"
+Admin,suspend,Main Admin,Account suspended,::1,"25/05/2025, 20:28:35"
+Admin,change-role,Gabriel,Changed role to customer,::1,"25/05/2025, 10:40:51"
+Admin,delete,N/A,User deleted,::1,"25/05/2025, 10:33:43"
+Admin,delete,N/A,User deleted,::1,"25/05/2025, 10:31:03"
